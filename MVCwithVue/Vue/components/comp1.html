@@ -1,0 +1,30 @@
+﻿<script type="text/x-template" id="comp1template">
+    <div>
+        <input type="text" v-model="person" />
+        <br />
+
+        <span>Text from Component 1</span>
+        <p>{{person.firstName}}</p>
+        <p>{{person.lastName}}</p>
+        <br />
+    </div>
+</script>
+
+<script>
+    Vue.component('comp1', {
+        template: '#comp1template',
+        props: person 
+        {
+            firstName: '',
+            lastName: ''
+        }
+        //data: function () {
+        //    return {
+        //        person: {
+        //            firstName: '',
+        //            lastName: '',
+        //        }
+        //    }
+        //}
+    });
+</script>

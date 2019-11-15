@@ -1,0 +1,24 @@
+﻿<div id="app">
+    <input type="text" v-model="person.firstName" />
+    <input type="text" v-model="person.lastName" />
+    <br />
+    <h3>MAIN APP VUE</h3>
+    <span>Text from input tag</span>
+    <br />
+    <p>{{person.firstName}} {{person.lastName}}</p>
+    <br />
+
+    <comp1> </comp1>
+</div>
+
+<script>
+    var mainVue = new Vue({
+        el: '#app',
+        data: {
+            person: {
+                firstName: 'First Name',
+                lastName: 'Last Name'
+            }
+        },
+    });
+</script>
